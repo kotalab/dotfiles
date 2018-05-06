@@ -6,8 +6,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+CASE_SENSITIVE="true"
 
-alias zshrc="subl ~/.zshrc"
+alias zshrc="atom ~/.zshrc"
 alias bundle!="bundle install && rake install"
 alias be="bundle exec"
 alias bi="bundle install"
@@ -20,53 +21,51 @@ alias gpull="git pull"
 alias gpush="git push"
 alias gbranch="git checkout -b"
 alias gclone="git clone"
-alias g="gittower ."
-alias s="subl ."
+#alias g="gittower ."
+#alias s="subl ."
 alias o="open ."
-alias server="python -m SimpleHTTPServer"
+alias cot="open $1 -a /Applications/CotEditor.app"
+alias at="open $1 -a /Applications/Atom.app"
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
+
 
 # Download YouTube videos
-alias youtube="youtube-dl"
-alias yt="youtube-dl"
+#alias youtube="youtube-dl"
+#alias yt="youtube-dl"
 
 # Compress pngs
-alias compress_png="pngquant"
-alias png="pngquant"
+#alias compress_png="pngquant"
+#alias png="pngquant"
 
-function o() {
-  z $1 && open .
-}
+# function o() {
+#   z $1 && open .
+# }
 
-function e() {
-  _z $1
-  git pull
-  gittower .
-  subl .
-}
+# function e() {
+#   _z $1
+#   git pull
+#   gittower .
+#   subl .
+# }
 
-. ~/.fastlane/completions/completion.sh
+#. ~/.fastlane/completions/completion.sh
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.fastlane/bin:$PATH"
-export PATH=$HOME/bin:$PATH
-export PATH=$HOME/homebrew/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/homebrew/lib:$LD_LIBRARY_PATH
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}
 
-export FL_PASSWORD="yo"
-
-# we don't want to influence the stats
-export FASTLANE_SKIP_UPDATE_CHECK="1"
-export FASTLANE_OPT_OUT_USAGE="1"
-export FASTLANE_OPT_OUT_CRASH_REPORTING="1"
-
-export LANG=en_US.UTF-8
-
-. ~/.oh-my-zsh/felix/z.sh
+export LANG=ja_JP.UTF-8
 
 # Xcode via @orta
-openx(){ 
+openx(){
   if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"
   then
     echo "Opening workspace"
@@ -77,7 +76,7 @@ openx(){
     then
       echo "Opening project"
       open *.xcodeproj
-      return  
+      return
     else
       echo "Nothing found"
     fi
@@ -85,14 +84,6 @@ openx(){
 }
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.keys
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='subl'
-fi
 
 # Go to the root of the current git project, or just go one folder up
 function up() {
@@ -107,7 +98,7 @@ function up() {
 
 # Powerline
 function powerline_precmd() {
-    PS1="$(~/.oh-my-zsh/felix/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
+    PS1="$(powerline-shell --shell zsh $?)"
 }
 
 function install_powerline_precmd() {
