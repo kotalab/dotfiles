@@ -89,5 +89,11 @@ function install_powerline_precmd() {
 
 install_powerline_precmd
 
+# Git
+function gcommit() {
+  git add .
+  git commit -m $1
+}
+
 # Init rbenv
 eval "$(rbenv init -)"
