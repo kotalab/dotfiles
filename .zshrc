@@ -7,6 +7,10 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 CASE_SENSITIVE="true"
+source $ZSH/oh-my-zsh.sh
+
+alias o="open ."
+alias a="open $1 -a /Applications/Atom.app"
 
 alias zshrc="atom ~/.zshrc"
 alias bundle!="bundle install && rake install"
@@ -21,33 +25,8 @@ alias gpull="git pull"
 alias gpush="git push"
 alias gbranch="git checkout -b"
 alias gclone="git clone"
-#alias g="gittower ."
-#alias s="subl ."
-alias o="open ."
-alias a="open $1 -a /Applications/Atom.app"
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 
-
-# Download YouTube videos
-#alias youtube="youtube-dl"
-#alias yt="youtube-dl"
-
-# Compress pngs
-#alias compress_png="pngquant"
-#alias png="pngquant"
-
-# function o() {
-#   z $1 && open .
-# }
-
-# function e() {
-#   _z $1
-#   git pull
-#   gittower .
-#   subl .
-# }
-
-#. ~/.fastlane/completions/completion.sh
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
@@ -57,11 +36,12 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+export LANG=ja_JP.UTF-8
+
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
 export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}
 
-export LANG=ja_JP.UTF-8
 
 # Xcode via @orta
 openx(){
@@ -81,8 +61,6 @@ openx(){
     fi
   fi
 }
-
-source $ZSH/oh-my-zsh.sh
 
 # Go to the root of the current git project, or just go one folder up
 function up() {
