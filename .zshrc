@@ -24,8 +24,7 @@ alias gclone="git clone"
 #alias g="gittower ."
 #alias s="subl ."
 alias o="open ."
-alias cot="open $1 -a /Applications/CotEditor.app"
-alias at="open $1 -a /Applications/Atom.app"
+alias a="open $1 -a /Applications/Atom.app"
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 
 
