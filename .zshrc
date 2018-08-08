@@ -26,7 +26,9 @@ alias gpush="git push"
 alias gbranch="git checkout -b"
 alias gclone="git clone"
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
-
+alias dcup="docker-compose up -d"
+alias dp="docker ps -a"
+alias di="docker images"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
@@ -41,7 +43,7 @@ export LANG=ja_JP.UTF-8
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
 export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}
-
+export PATH=/Library/Python/3.6/lib/python:$PATH
 
 # Xcode via @orta
 openx(){
