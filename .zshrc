@@ -13,11 +13,19 @@ alias o="open ."
 alias a="open $1 -a /Applications/Atom.app"
 
 alias zshrc="atom ~/.zshrc"
+
 alias bundle!="bundle install && rake install"
 alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
 alias ri="rake install"
+
+alias re="rbenv exec"
+alias rebe="rbenv exec bundle exec"
+alias rebi="rbenv exec bundle install"
+alias rebu="rbenv exec bundle update"
+alias reri="rbenv exec rake install"
+
 alias gc="git checkout"
 alias gco="git checkout"
 alias gcm="git checkout master"
@@ -25,7 +33,9 @@ alias gpull="git pull"
 alias gpush="git push"
 alias gbranch="git checkout -b"
 alias gclone="git clone"
+
 alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
+
 alias doc="docker"
 alias dr="docker rm"
 alias dri="docker rmi"
@@ -34,6 +44,7 @@ alias dp="docker ps -a"
 alias di="docker images"
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
+
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
