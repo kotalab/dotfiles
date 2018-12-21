@@ -51,7 +51,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME
+export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export LANG=ja_JP.UTF-8
@@ -120,3 +120,8 @@ eval "$(rbenv init -)"
 export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 eval "$(swiftenv init -)"
+
+# goenv
+export GOENV_ROOT=$HOME/.goenv
+export PATH="$HOME/.goenv/bin:$PATH"
+eval "$(goenv init -)"
