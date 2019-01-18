@@ -113,7 +113,7 @@ function gcommit() {
   git commit -m $1
 }
 
-# Init rbenv
+# rbenv
 eval "$(rbenv init -)"
 
 # swiftenv
@@ -122,8 +122,9 @@ export PATH="$SWIFTENV_ROOT/bin:$PATH"
 eval "$(swiftenv init -)"
 
 #goenv
-export PATH="$HOME/.goenv/bin:$PATH"
 export GOPATH=$HOME/go
+export GOENV_ROOT=$HOME/.goenv
+export PATH="$HOME/.goenv/bin:$PATH"
 eval "$(goenv init -)"
 
 #nodebrew
@@ -131,4 +132,3 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 #mysql
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
