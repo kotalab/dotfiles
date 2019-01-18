@@ -11,8 +11,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias o="open ."
 alias a="open $1 -a /Applications/Atom.app"
+alias vs="open $1 -a /Applications/Visual\ Studio\ Code.app"
 
-alias zshrc="atom ~/.zshrc"
+alias zshrc="vs ~/.zshrc"
 
 alias bundle!="bundle install && rake install"
 alias be="bundle exec"
@@ -51,7 +52,6 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/mysql/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export LANG=ja_JP.UTF-8
@@ -120,3 +120,15 @@ eval "$(rbenv init -)"
 export SWIFTENV_ROOT="$HOME/.swiftenv"
 export PATH="$SWIFTENV_ROOT/bin:$PATH"
 eval "$(swiftenv init -)"
+
+#goenv
+export PATH="$HOME/.goenv/bin:$PATH"
+export GOPATH=$HOME/go
+eval "$(goenv init -)"
+
+#nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+#mysql
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
