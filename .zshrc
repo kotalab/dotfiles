@@ -56,11 +56,6 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 export LANG=ja_JP.UTF-8
 
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-export PATH=/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}
-export PATH=/Library/Python/3.6/lib/python:$PATH
-
 # Xcode via @orta
 openx(){
   if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"

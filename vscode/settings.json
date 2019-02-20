@@ -1,0 +1,8 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.enableAppInsights": false,
+    "workbench.iconTheme": "vscode-icons"
+}
