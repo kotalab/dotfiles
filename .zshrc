@@ -10,11 +10,11 @@ CASE_SENSITIVE="true"
 source $ZSH/oh-my-zsh.sh
 
 alias o="open ."
-alias a="open $1 -a /Applications/Atom.app"
 alias vs="open $1 -a /Applications/Visual\ Studio\ Code.app"
-
 alias zshrc="vs ~/.zshrc"
+alias la="ls -a"
 
+# bundler
 alias bundle!="bundle install && rake install"
 alias be="bundle exec"
 alias bi="bundle install"
@@ -27,16 +27,20 @@ alias rebi="rbenv exec bundle install"
 alias rebu="rbenv exec bundle update"
 alias reri="rbenv exec rake install"
 
+# git
 alias gc="git checkout"
-alias gco="git checkout"
 alias gcm="git checkout master"
 alias gpull="git pull"
 alias gpush="git push"
 alias gbranch="git checkout -b"
 alias gclone="git clone"
+alias gf="git fetch -p"
+alias gd="git diff"
+alias gs="git status"
+alias ga="git add"
+alias gall="git add ."
 
-alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
-
+#docker
 alias doc="docker"
 alias dr="docker rm"
 alias dri="docker rmi"
@@ -46,6 +50,7 @@ alias di="docker images"
 alias dc="docker-compose"
 alias dcup="docker-compose up -d"
 
+alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin brew"
 
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
