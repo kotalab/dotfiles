@@ -107,6 +107,11 @@ function install_powerline_precmd() {
 
 install_powerline_precmd
 
+alias cd="cdls"
+function cdls() {
+  builtin cd $1 && la
+}
+
 # Git
 function gcommit() {
   git add .
