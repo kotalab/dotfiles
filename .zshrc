@@ -123,12 +123,6 @@ function gcommit() {
 eval "$(rbenv init -)"
 
 
-#goenv
-export GOPATH=$HOME/go
-export GOENV_ROOT=$HOME/.goenv
-export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
-
 #nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
