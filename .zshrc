@@ -122,9 +122,5 @@ function gcommit() {
 # rbenv
 eval "$(rbenv init -)"
 
-
-#nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-
 #mysql
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
