@@ -124,3 +124,9 @@ eval "$(rbenv init -)"
 
 #mysql
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+# resize via https://qiita.com/kinoleaf/items/df93150874bf0a6c9b9d#もう一歩
+alias rs="resize"
+function resize() {
+  convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB -resize 30% $2
+}
