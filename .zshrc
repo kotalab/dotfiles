@@ -127,6 +127,12 @@ eval "$(rbenv init -)"
 #mysql
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
+#git
+export PATH="/usr/local/git/bin:$PATH"
+
+#nodebrew
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
 # resize via https://qiita.com/kinoleaf/items/df93150874bf0a6c9b9d#もう一歩
 alias rs="resize"
 function resize() {
