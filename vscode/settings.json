@@ -20,5 +20,8 @@
     "editor.minimap.enabled": false,
     "telemetry.enableTelemetry": false,
     "terminal.enableAppInsights": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
 }
