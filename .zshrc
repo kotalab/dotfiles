@@ -114,7 +114,7 @@ alias cd="cdls"
 function cdls() {
   builtin cd $1 && la
 }
-alias cdev="cd ~/Develop"
+alias cdev="cd ~/Developer"
 
 # Git
 function gcommit() {
