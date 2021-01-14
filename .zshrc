@@ -139,3 +139,16 @@ alias rs="resize"
 function resize() {
   convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB -resize 30% $2
 }
+
+# Create new tasks in Omnifocus via https://gist.github.com/brandonpittman/fd582d21eb00c12450b8
+function NT () {
+  if [[ $# -eq 0 ]]; then
+    open -a "OmniFocus"
+  else
+    osascript <<EOT
+    tell application "OmniFocus"
+      parse tasks into default document with transport text "$@"
+    end tell
+EOT
+  fi
+}
