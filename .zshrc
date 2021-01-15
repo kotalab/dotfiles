@@ -65,7 +65,7 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Hom
 export LANG=ja_JP.UTF-8
 
 # Xcode via @orta
-openx(){
+ox(){
   if test -n "$(find . -maxdepth 1 -name '*.xcworkspace' -print -quit)"
   then
     echo "Opening workspace"
