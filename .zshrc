@@ -61,8 +61,14 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
 export LANG=ja_JP.UTF-8
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Xcode via @orta
 ox(){
