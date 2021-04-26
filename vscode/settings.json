@@ -28,4 +28,5 @@
     "go.lintFlags": [
         "--fast"
     ],
+    "ruby.useLanguageServer": true,
   }
